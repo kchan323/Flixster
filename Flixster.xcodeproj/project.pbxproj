@@ -15,6 +15,7 @@
 		F96367D122C3F3C8001E8198 /* FlixsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367D022C3F3C8001E8198 /* FlixsterTests.m */; };
 		F96367DC22C3F3C8001E8198 /* FlixsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367DB22C3F3C8001E8198 /* FlixsterUITests.m */; };
 		F96367EB22C40225001E8198 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367EA22C40225001E8198 /* MoviesViewController.m */; };
+		F96367F122C4247F001E8198 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367F022C4247F001E8198 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		F96367DD22C3F3C8001E8198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96367E922C40225001E8198 /* MoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoviesViewController.h; sourceTree = "<group>"; };
 		F96367EA22C40225001E8198 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
+		F96367EF22C4247F001E8198 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		F96367F022C4247F001E8198 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 		F96367ED22C40327001E8198 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F96367EF22C4247F001E8198 /* MovieCell.h */,
+				F96367F022C4247F001E8198 /* MovieCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			files = (
 				F96367C722C3F3C8001E8198 /* main.m in Sources */,
 				F96367B922C3F3C7001E8198 /* AppDelegate.m in Sources */,
+				F96367F122C4247F001E8198 /* MovieCell.m in Sources */,
 				F96367EB22C40225001E8198 /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
