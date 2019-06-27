@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		F96367DC22C3F3C8001E8198 /* FlixsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367DB22C3F3C8001E8198 /* FlixsterUITests.m */; };
 		F96367EB22C40225001E8198 /* MoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367EA22C40225001E8198 /* MoviesViewController.m */; };
 		F96367F122C4247F001E8198 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367F022C4247F001E8198 /* MovieCell.m */; };
+		F96367F422C43A6D001E8198 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367F322C43A6D001E8198 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		F96367EA22C40225001E8198 /* MoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesViewController.m; sourceTree = "<group>"; };
 		F96367EF22C4247F001E8198 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		F96367F022C4247F001E8198 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		F96367F222C43A6D001E8198 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F96367F322C43A6D001E8198 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +109,6 @@
 				AB743DB46DE3712DC4F2D547 /* Pods-FlixsterUITests.debug.xcconfig */,
 				1440026B38188D9B9C6C0493 /* Pods-FlixsterUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,6 +184,8 @@
 			children = (
 				F96367E922C40225001E8198 /* MoviesViewController.h */,
 				F96367EA22C40225001E8198 /* MoviesViewController.m */,
+				F96367F222C43A6D001E8198 /* DetailsViewController.h */,
+				F96367F322C43A6D001E8198 /* DetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -423,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96367C722C3F3C8001E8198 /* main.m in Sources */,
+				F96367F422C43A6D001E8198 /* DetailsViewController.m in Sources */,
 				F96367B922C3F3C7001E8198 /* AppDelegate.m in Sources */,
 				F96367F122C4247F001E8198 /* MovieCell.m in Sources */,
 				F96367EB22C40225001E8198 /* MoviesViewController.m in Sources */,
