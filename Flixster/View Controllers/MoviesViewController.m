@@ -53,9 +53,6 @@
             }
             
             [self.tableView reloadData];
-            // TODO: Get the array of movies
-            // TODO: Store the movies in a property to use elsewhere
-            // TODO: Reload your table view data
         }
         [self.refreshControl endRefreshing];
     }];
@@ -81,7 +78,6 @@
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
-//    cell.textLabel.text = movie[@"title"];
     
     return cell;
 }
