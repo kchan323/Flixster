@@ -8,12 +8,14 @@
 
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "QuartzCore/QuartzCore.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -30,6 +32,18 @@
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     [self.posterView setImageWithURL:posterURL];
     
+    //border for poster view
+    #define kBorderWidth 2.0
+    #define kCornerRadius 0
+    CALayer *borderLayer = [CALayer layer];
+    CGRect borderFrame = CGRectMake(0, 0, (self.posterView.frame.size.width), (self.posterView.frame.size.height));
+    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+    [borderLayer setFrame:borderFrame];
+    [borderLayer setCornerRadius:kCornerRadius];
+    [borderLayer setBorderWidth:kBorderWidth];
+    [borderLayer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.posterView.layer addSublayer:borderLayer];
+    
     NSString *backdropURLString = self.movie[@"backdrop_path"];
     NSString *fullBackdropURLString = [baseURLString stringByAppendingString:backdropURLString];
     
@@ -37,9 +51,11 @@
     [self.backdropView setImageWithURL:backdropURL];
 
     self.titleLabel.text = self.movie[@"title"];
+    self.dateLabel.text = self.movie[@"release_date"];
     self.synopsisLabel.text = self.movie[@"overview"];
     
     [self.titleLabel sizeToFit];
+    [self.dateLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
 }
 
