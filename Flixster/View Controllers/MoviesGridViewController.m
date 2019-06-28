@@ -49,11 +49,30 @@
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             
-            self.movies = dataDictionary[@"results"];
+            //self.movies = dataDictionary[@"results"];
+            
+            //filter superhero movies
+            NSArray *allMovies = dataDictionary[@"results"];
+            self.movies = [self filterMovies:allMovies];
+            
             [self.collectionView reloadData];
         }
     }];
     [task resume];
+}
+
+//filter superhero movies
+- (NSArray *)filterMovies:(NSArray *)allMovies {
+    NSMutableArray *superheroMovies = [[NSMutableArray alloc] init];
+    NSNumber *genre_id = @878;
+    for(int i = 0; i < allMovies.count; i++) {
+        NSDictionary *dictionaryMovie = allMovies[i];
+        NSArray *ids = dictionaryMovie[@"genre_ids"];
+        if([ids containsObject: (NSNumber*)genre_id]) {
+            [superheroMovies addObject:dictionaryMovie];
+        }
+    }
+    return superheroMovies;
 }
 
 /*
