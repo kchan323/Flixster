@@ -2,7 +2,7 @@
 
 **Flixster** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **6+4+3** hours spent in total
+Time spent: **18** hours spent in total
 
 ## User Stories
 
@@ -27,6 +27,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] User taps the poster, a new screen is presented modally to view the trailer.
 - [ ] List anything else that you can get done to improve the app functionality!
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
