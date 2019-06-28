@@ -12,6 +12,8 @@
 		A6FEB0928BD27F838C1388FF /* Pods_FlixsterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4F809B9FD53303A24FA0D8 /* Pods_FlixsterUITests.framework */; };
 		F93FDD3322C5DB4E0082E8C5 /* FamilyGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93FDD3222C5DB4E0082E8C5 /* FamilyGridViewController.m */; };
 		F93FDD3622C5DD750082E8C5 /* FamilyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F93FDD3522C5DD750082E8C5 /* FamilyCollectionCell.m */; };
+		F93FDD3922C6CFC80082E8C5 /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F93FDD3822C6CFC80082E8C5 /* TrailerViewController.m */; };
+		F93FDD3B22C6DC880082E8C5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93FDD3A22C6DC880082E8C5 /* WebKit.framework */; };
 		F96367B922C3F3C7001E8198 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F96367B822C3F3C7001E8198 /* AppDelegate.m */; };
 		F96367BF22C3F3C7001E8198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96367BD22C3F3C7001E8198 /* Main.storyboard */; };
 		F96367C122C3F3C8001E8198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96367C022C3F3C8001E8198 /* Assets.xcassets */; };
@@ -57,6 +59,9 @@
 		F93FDD3222C5DB4E0082E8C5 /* FamilyGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FamilyGridViewController.m; sourceTree = "<group>"; };
 		F93FDD3422C5DD750082E8C5 /* FamilyCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FamilyCollectionCell.h; sourceTree = "<group>"; };
 		F93FDD3522C5DD750082E8C5 /* FamilyCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FamilyCollectionCell.m; sourceTree = "<group>"; };
+		F93FDD3722C6CFC80082E8C5 /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		F93FDD3822C6CFC80082E8C5 /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		F93FDD3A22C6DC880082E8C5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F96367B422C3F3C7001E8198 /* Flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96367B722C3F3C7001E8198 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F96367B822C3F3C7001E8198 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93FDD3B22C6DC880082E8C5 /* WebKit.framework in Frameworks */,
 				0963E30D84F37843EDF0F877 /* Pods_Flixster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +133,7 @@
 		960BD33A652D90390C3EC688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F93FDD3A22C6DC880082E8C5 /* WebKit.framework */,
 				F1D899E39C676CBADF2B51CC /* Pods_Flixster.framework */,
 				F83C5970EAE547E46F18885B /* Pods_FlixsterTests.framework */,
 				6E4F809B9FD53303A24FA0D8 /* Pods_FlixsterUITests.framework */,
@@ -202,6 +209,8 @@
 				F96367F622C4477A001E8198 /* MoviesGridViewController.m */,
 				F93FDD3122C5DB4E0082E8C5 /* FamilyGridViewController.h */,
 				F93FDD3222C5DB4E0082E8C5 /* FamilyGridViewController.m */,
+				F93FDD3722C6CFC80082E8C5 /* TrailerViewController.h */,
+				F93FDD3822C6CFC80082E8C5 /* TrailerViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 			files = (
 				F96367C722C3F3C8001E8198 /* main.m in Sources */,
 				F96367F422C43A6D001E8198 /* DetailsViewController.m in Sources */,
+				F93FDD3922C6CFC80082E8C5 /* TrailerViewController.m in Sources */,
 				F96367B922C3F3C7001E8198 /* AppDelegate.m in Sources */,
 				F96367FA22C44A14001E8198 /* MovieCollectionCell.m in Sources */,
 				F93FDD3322C5DB4E0082E8C5 /* FamilyGridViewController.m in Sources */,

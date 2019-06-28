@@ -1,8 +1,8 @@
 //
-//  DetailsViewController.h
+//  TrailerViewController.h
 //  Flixster
 //
-//  Created by kchan23 on 6/26/19.
+//  Created by kchan23 on 6/28/19.
 //  Copyright © 2019 kchan23. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DetailsViewController : UIViewController
+@interface TrailerViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *movie;
 
