@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -39,6 +40,8 @@
 }
 
 - (void)fetchMovies {
+    [self.activityIndicator startAnimating];
+
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -49,11 +52,31 @@
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             
-            self.movies = dataDictionary[@"results"];
+            //self.movies = dataDictionary[@"results"];
+            
+            //filter superhero movies
+            NSArray *allMovies = dataDictionary[@"results"];
+            self.movies = [self filterMovies:allMovies];
+            
             [self.collectionView reloadData];
+            [self.activityIndicator stopAnimating];
         }
     }];
     [task resume];
+}
+
+//filter superhero movies
+- (NSArray *)filterMovies:(NSArray *)allMovies {
+    NSMutableArray *superheroMovies = [[NSMutableArray alloc] init];
+    NSNumber *genre_id = @878;
+    for(int i = 0; i < allMovies.count; i++) {
+        NSDictionary *dictionaryMovie = allMovies[i];
+        NSArray *ids = dictionaryMovie[@"genre_ids"];
+        if([ids containsObject: (NSNumber*)genre_id]) {
+            [superheroMovies addObject:dictionaryMovie];
+        }
+    }
+    return superheroMovies;
 }
 
 /*
