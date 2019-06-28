@@ -92,6 +92,7 @@
                     <connections>
                         <segue destination="agD-yb-cIr" kind="relationship" relationship="viewControllers" id="xFS-We-vbV"/>
                         <segue destination="nTq-HW-W8D" kind="relationship" relationship="viewControllers" id="T9K-38-E5w"/>
+                        <segue destination="NuN-or-zhM" kind="relationship" relationship="viewControllers" id="56I-0m-Eyj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9E-pO-zk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,7 +193,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1t-Z8-XpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="723"/>
+            <point key="canvasLocation" x="625" y="723"/>
         </scene>
         <!--Movies Grid View Controller-->
         <scene sceneID="C52-TE-I0V">
@@ -250,7 +251,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L62-R6-800" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445.5999999999999" y="1437.9310344827586"/>
+            <point key="canvasLocation" x="624.79999999999995" y="1437.9310344827586"/>
+        </scene>
+        <!--Family Grid View Controller-->
+        <scene sceneID="upq-Yt-QHf">
+            <objects>
+                <viewController id="eZo-7K-6ld" customClass="FamilyGridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qb5-gu-lA1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4sz-Px-XLf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="hxq-nJ-xdO">
+                                    <size key="itemSize" width="125" height="175"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="0Up-4Y-7x7">
+                                    <rect key="frame" x="0.0" y="-88" width="375" height="812"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FamilyCollectionCell" id="9UG-iw-138" customClass="FamilyCollectionCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="175"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-5V-pg3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="175"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.48078325710000003" green="0.6127910526" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="posterView" destination="N6U-5V-pg3" id="VbG-eJ-Q1h"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2yT-pV-ro7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ICS-ct-m5K"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0Up-4Y-7x7" id="gxY-yQ-kRI"/>
+                        <outlet property="collectionView" destination="4sz-Px-XLf" id="4qD-ff-M3K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zi-ZD-bUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480.8" y="1437.9310344827586"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="hv4-rk-gFX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NuN-or-zhM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Family" id="2EC-b6-Ga7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GjU-F9-FV0">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eZo-7K-6ld" kind="relationship" relationship="rootViewController" id="iiy-10-6M0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29J-CQ-k0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="723"/>
         </scene>
     </scenes>
 </document>
