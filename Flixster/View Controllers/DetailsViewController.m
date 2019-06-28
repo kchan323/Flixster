@@ -25,6 +25,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //navigation bar customization
+    UILabel *navtitleLabel = [UILabel new];
+    
+    NSShadow *shadow = [NSShadow new];
+    shadow.shadowColor = [[UIColor grayColor] colorWithAlphaComponent:0.5];
+    shadow.shadowOffset = CGSizeMake(2, 2);
+    shadow.shadowBlurRadius = 4;
+    
+    //self.movie[@"title"];
+    NSString *navTitle = self.movie[@"title"];
+    //NSAttributedString *titleText = [[NSAttributedString alloc] initWithString:navTitle];
+    NSAttributedString *titleText = [[NSAttributedString alloc] initWithString:navTitle
+                                                                    attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+                                                                                 NSForegroundColorAttributeName : [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8],
+                                                                                 NSShadowAttributeName : shadow}];
+
+    
+    navtitleLabel.attributedText = titleText;
+    [navtitleLabel sizeToFit];
+    self.navigationItem.titleView = navtitleLabel;
+
+    
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = self.movie[@"poster_path"];
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
