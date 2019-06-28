@@ -195,7 +195,7 @@
             </objects>
             <point key="canvasLocation" x="625" y="723"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Superhero-->
         <scene sceneID="C52-TE-I0V">
             <objects>
                 <viewController id="989-Jc-7qX" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -243,7 +243,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WCy-dP-FxK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EZZ-zn-E7L"/>
+                    <navigationItem key="navigationItem" title="Superhero" id="EZZ-zn-E7L"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ygg-w1-zFs" id="KDS-rc-S1Z"/>
                         <outlet property="collectionView" destination="CRu-CX-agL" id="ujC-as-rT1"/>
@@ -253,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="624.79999999999995" y="1437.9310344827586"/>
         </scene>
-        <!--Family Grid View Controller-->
+        <!--Family-->
         <scene sceneID="upq-Yt-QHf">
             <objects>
                 <viewController id="eZo-7K-6ld" customClass="FamilyGridViewController" sceneMemberID="viewController">
@@ -301,7 +301,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2yT-pV-ro7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ICS-ct-m5K"/>
+                    <navigationItem key="navigationItem" title="Family" id="ICS-ct-m5K"/>
                     <connections>
                         <outlet property="activityIndicator" destination="0Up-4Y-7x7" id="gxY-yQ-kRI"/>
                         <outlet property="collectionView" destination="4sz-Px-XLf" id="4qD-ff-M3K"/>
