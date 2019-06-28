@@ -104,8 +104,22 @@
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
     
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:posterURL];
     cell.posterView.image = nil;
     [cell.posterView setImageWithURL:posterURL];
+    
+    [cell.posterView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+        [cell.posterView setImage:image];
+        cell.posterView.alpha = 0;
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            cell.posterView.alpha = 1;
+            cell.posterView.center = CGPointMake(cell.posterView.center.x, cell.posterView.center.y + 3);
+        }];
+        
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        
+    }];
     
     return cell;
 }
