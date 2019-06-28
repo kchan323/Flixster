@@ -68,16 +68,16 @@
 
 //filter family movies
 - (NSArray *)filterMovies:(NSArray *)allMovies {
-    NSMutableArray *superheroMovies = [[NSMutableArray alloc] init];
+    NSMutableArray *familyMovies = [[NSMutableArray alloc] init];
     NSNumber *genre_id = @10751;
     for(int i = 0; i < allMovies.count; i++) {
         NSDictionary *dictionaryMovie = allMovies[i];
         NSArray *ids = dictionaryMovie[@"genre_ids"];
         if([ids containsObject: (NSNumber*)genre_id]) {
-            [superheroMovies addObject:dictionaryMovie];
+            [familyMovies addObject:dictionaryMovie];
         }
     }
-    return superheroMovies;
+    return familyMovies;
 }
 
 #pragma mark - Navigation
