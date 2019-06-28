@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBP-9b-P0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="2162"/>
+            <point key="canvasLocation" x="625" y="2181"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="KJp-w3-wwR">
@@ -235,6 +235,7 @@
                                         <color key="backgroundColor" red="0.48078325710000003" green="0.6127910526" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="posterView" destination="ACr-mO-pL4" id="OnX-yr-KcB"/>
+                                            <segue destination="V7t-36-vYa" kind="show" id="nJ5-AP-MIy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -293,6 +294,7 @@
                                         <color key="backgroundColor" red="0.48078325710000003" green="0.6127910526" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="posterView" destination="N6U-5V-pg3" id="VbG-eJ-Q1h"/>
+                                            <segue destination="V7t-36-vYa" kind="show" id="S80-fk-hE8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -331,4 +333,7 @@
             <point key="canvasLocation" x="1481" y="723"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="S80-fk-hE8"/>
+    </inferredMetricsTieBreakers>
 </document>

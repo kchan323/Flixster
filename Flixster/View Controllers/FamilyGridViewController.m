@@ -9,6 +9,7 @@
 #import "FamilyGridViewController.h"
 #import "FamilyCollectionCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailsViewController.h"
 
 @interface FamilyGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -79,16 +80,19 @@
     return superheroMovies;
 }
 
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UICollectionViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
+    NSDictionary *movie = self.movies[indexPath.row];
+    
+    DetailsViewController *detailsViewController =  [segue destinationViewController];
+    detailsViewController.movie = movie;
 }
-*/
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FamilyCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FamilyCollectionCell" forIndexPath:indexPath];
