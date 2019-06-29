@@ -39,8 +39,8 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://recordit.co/M0GAFe37xD' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://recordit.co/d0GiR35r9U' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://recordit.co/M0GAFe37xD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://recordit.co/d0GiR35r9U.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Recordit](http://recordit.co).
 
