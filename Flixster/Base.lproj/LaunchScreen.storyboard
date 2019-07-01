@@ -18,19 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="1pE-f2-EmV">
-                                <rect key="frame" x="118" y="305" width="138" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="1pE-f2-EmV">
+                                <rect key="frame" x="118.66666666666669" y="336.66666666666669" width="138" height="139"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-y8-zeG">
-                                <rect key="frame" x="145" y="452" width="85" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-y8-zeG">
+                                <rect key="frame" x="161.66666666666666" y="483.66666666666669" width="51.666666666666657" height="48.000000000000057"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1pE-f2-EmV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="C2g-Wy-Up7"/>
+                            <constraint firstItem="rZY-y8-zeG" firstAttribute="top" secondItem="1pE-f2-EmV" secondAttribute="bottom" constant="8" id="ONO-jk-waM"/>
+                            <constraint firstItem="1pE-f2-EmV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="XjS-Ny-C9o"/>
+                            <constraint firstItem="rZY-y8-zeG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mZh-PA-6ML"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
